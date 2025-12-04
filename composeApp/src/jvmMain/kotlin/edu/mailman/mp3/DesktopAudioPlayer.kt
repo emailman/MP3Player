@@ -16,8 +16,8 @@ class DesktopAudioPlayer : AudioPlayer {
         }
         
         // Get the audio file path from resources
-        val resource = Thread.currentThread().contextClassLoader.getResource("audio/sample.mp3")
-            ?: error("audio/sample.mp3 not found in resources")
+        val resource = Thread.currentThread().contextClassLoader.getResource("audio/carousel.mp3")
+            ?: error("audio/carousel.mp3 not found in resources")
         
         println("Loading audio from: ${resource.toExternalForm()}")
         

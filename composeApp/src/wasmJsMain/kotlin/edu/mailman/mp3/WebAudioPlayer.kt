@@ -3,12 +3,12 @@ package edu.mailman.mp3
 import kotlinx.browser.document
 import org.w3c.dom.HTMLAudioElement
 import androidx.compose.ui.ExperimentalComposeUiApi
-import androidx.compose.ui.window.ComposeWindow
+import androidx.compose.ui.window.ComposeViewport
 
 class WebAudioPlayer : AudioPlayer {
     private val audio: HTMLAudioElement by lazy {
         val a = document.createElement("audio") as HTMLAudioElement
-        a.src = "audio/sample.mp3"
+        a.src = "audio/carousel.mp3"
         a.loop = true
         a
     }
@@ -23,7 +23,7 @@ class WebAudioPlayer : AudioPlayer {
 
 @OptIn(ExperimentalComposeUiApi::class)
 fun main() {
-    ComposeWindow().setContent {
+    ComposeViewport {
         AudioApp { WebAudioPlayer() }
     }
 }
