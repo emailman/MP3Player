@@ -2,8 +2,6 @@ package edu.mailman.mp3
 
 import kotlinx.browser.document
 import org.w3c.dom.HTMLAudioElement
-import androidx.compose.ui.ExperimentalComposeUiApi
-import androidx.compose.ui.window.ComposeViewport
 
 class WebAudioPlayer : AudioPlayer {
     private val audio: HTMLAudioElement by lazy {
@@ -21,9 +19,12 @@ class WebAudioPlayer : AudioPlayer {
     override fun dispose() { audio.pause(); audio.src = ""; playing = false }
 }
 
+/*
 @OptIn(ExperimentalComposeUiApi::class)
 fun main() {
     ComposeViewport {
         AudioApp { WebAudioPlayer() }
     }
 }
+
+ */
