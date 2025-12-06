@@ -18,13 +18,3 @@ class WebAudioPlayer : AudioPlayer {
     override fun isPlaying(): Boolean = playing
     override fun dispose() { audio.pause(); audio.src = ""; playing = false }
 }
-
-/*
-@OptIn(ExperimentalComposeUiApi::class)
-fun main() {
-    ComposeViewport {
-        AudioApp { WebAudioPlayer() }
-    }
-}
-
- */
